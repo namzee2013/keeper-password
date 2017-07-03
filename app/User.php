@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Auth;
 
 class User extends Authenticatable
 {
@@ -35,5 +36,13 @@ class User extends Authenticatable
     public function password()
     {
       return $this->hasMany(Password::class);
+    }
+
+    public function isAdmin() {
+      return $this->role->role === 'ADMIN';
+    }
+
+    public function canAccess() {
+      return Auth::user()->isAdmin() && Auth::user()->id !== $this->id;
     }
 }
