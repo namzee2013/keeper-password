@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('public/css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('public/css/style.css') }}">
 </head>
 <body>
     <div id="app">
@@ -38,6 +39,11 @@
                     <ul class="nav navbar-nav">
                         &nbsp;
                     </ul>
+                    <!-- Left Side Of Navbar -->
+
+                      <ul class="nav navbar-nav navbar-left">
+                        <li><a href="{{ route('keeper-password.index') }}">Keeper Password</a></li>
+                      </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
@@ -70,11 +76,23 @@
                 </div>
             </div>
         </nav>
-
-        @yield('content')
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              @if (Session::has('flash_message'))
+                 <div class="alert alert-{!! Session::get('flash_level') !!}">
+                     {!! Session::get('flash_message') !!}
+                 </div>
+              @endif
+              @yield('content')
+            </div>
+          </div>
+        </div>
     </div>
-
     <!-- Scripts -->
     <script src="{{ asset('public/js/app.js') }}"></script>
+    <script src="{{ asset('public/js/code.js') }}">
+
+    </script>
 </body>
 </html>
