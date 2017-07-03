@@ -11,8 +11,8 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('public/css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('public/css/style.css') }}">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
     <div id="app">
@@ -93,8 +93,8 @@
         </div>
     </div>
     <!-- Scripts -->
-    <script src="{{ asset('public/js/app.js') }}"></script>
-    <script src="{{ asset('public/js/code.js') }}">
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/code.js') }}">
 
     </script>
 </body>
