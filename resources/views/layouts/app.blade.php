@@ -43,6 +43,9 @@
 
                       <ul class="nav navbar-nav navbar-left">
                         <li><a href="{{ route('keeper-password.index') }}">Keeper Password</a></li>
+                        @if(Auth::check() && Auth::user()->isAdmin())
+                          <li><a href="{{ route('user.index') }}">User</a></li>
+                        @endif
                       </ul>
 
                     <!-- Right Side Of Navbar -->
