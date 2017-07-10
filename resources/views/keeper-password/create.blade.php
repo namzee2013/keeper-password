@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'Password - create')
 @section('content')
 <form class="form-horizontal" action="{{ route('keeper-password.store') }}" method="post" autocomplete="off">
   {{ csrf_field() }}

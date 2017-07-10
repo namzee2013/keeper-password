@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'Password - List')
 @section('content')
 <div class="panel panel-info">
   <div class="panel-heading">Keeper Password</div>

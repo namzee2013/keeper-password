@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'Password - '.$data->title)
 @section('content')
 <div class="panel panel-primary">
   <div class="panel-heading">

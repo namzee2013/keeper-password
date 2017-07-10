@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'Home')
 @section('content')
     <div class="panel panel-default">
         <div class="panel-heading">Dashboard</div>
