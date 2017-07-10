@@ -22,7 +22,7 @@
         <label for="login" class="col-md-2 control-label">Login</label>
         <div class="col-md-8">
           <input id="login" class="form-control" type="text"
-            name="login" placeholder="login..." value="{{ old('login') }}">
+            name="login" placeholder="login..." value="{{ old('login') }}" autocomplete="off">
           @if ($errors->has('login'))
             <span class="help-block">{{ $errors->first('login') }}</span>
           @endif
@@ -34,7 +34,7 @@
         <div class="col-md-8">
           <div class="input-group">
             <input id="password" type="password" name="password" class="form-control"
-              placeholder="password keeper..." value="{{ old('password') }}">
+              placeholder="password keeper..." value="{{ old('password') }}" autocomplete="off">
             <span class="input-group-btn">
               <a id="ShowPassword" class="btn btn-default" type="button">show</a>
               <a id="Copy" class="btn btn-info" type="button">copy</a>

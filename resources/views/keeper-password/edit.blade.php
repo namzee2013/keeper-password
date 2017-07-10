@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('content')
-<form class="form-horizontal" action="{{ route('keeper-password.update', $data->id) }}" method="post" >
+<form class="form-horizontal" action="{{ route('keeper-password.update', $data->id) }}" method="post" autocomplete="off">
   {{ method_field('PUT') }}
   {{ csrf_field() }}
   <div class="panel panel-info">

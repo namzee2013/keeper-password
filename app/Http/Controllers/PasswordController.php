@@ -20,7 +20,11 @@ class PasswordController extends Controller
      */
     public function index()
     {
-      $data = Password::where('user_id', Auth::user()->id)->get();
+        if (Auth::user()->isAdmin()) {
+          $data = Password::all();
+        } else {
+          $data = Password::where('user_id', Auth::user()->id)->get();
+        }
         return view('keeper-password.index', compact('data'));
     }
 
