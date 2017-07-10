@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'User - edit: '.$user->email)
 @section('content')
 <form class="form-horizontal" action="{{ route('user.update', $user->id) }}" method="post" autocomplete="off">
   {{ method_field('PUT') }}

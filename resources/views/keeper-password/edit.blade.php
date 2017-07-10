@@ -1,6 +1,5 @@
-
 @extends('layouts.app')
-
+@section('title', 'Password - edit: '.$data->title)
 @section('content')
 <form class="form-horizontal" action="{{ route('keeper-password.update', $data->id) }}" method="post" autocomplete="off">
   {{ method_field('PUT') }}

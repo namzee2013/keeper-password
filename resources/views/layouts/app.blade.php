@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Keeper | @yield('title')</title>
 
     <!-- Styles -->
     <link href="{{ asset('public/css/app.css') }}" rel="stylesheet">
@@ -30,7 +30,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        Home
                     </a>
                 </div>
 
@@ -42,7 +42,9 @@
                     <!-- Left Side Of Navbar -->
 
                       <ul class="nav navbar-nav navbar-left">
+                        @if(Auth::check())
                         <li><a href="{{ route('keeper-password.index') }}">Keeper Password</a></li>
+                        @endif
                         @if(Auth::check() && Auth::user()->isAdmin())
                           <li><a href="{{ route('user.index') }}">User</a></li>
                         @endif

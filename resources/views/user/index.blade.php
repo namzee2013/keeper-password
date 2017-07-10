@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'User - List')
 @section('content')
 <div class="panel panel-info">
   <div class="panel-heading">User</div>
